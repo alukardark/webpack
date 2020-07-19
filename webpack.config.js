@@ -12,6 +12,19 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 const isDevelopment = process.env.NODE_ENV === 'development';
 const isProduction = !isDevelopment;
 
+const htmlWebpackTemplates = ['index'];
+
+let htmlWebpackPlugins = htmlWebpackTemplates.map(name => {
+    return new HtmlWebpackPlugin({
+        minify: {
+            collapseWhitespace: false
+        },
+        filename: `${name}.html`,
+        template: `${name}.html`
+    })
+});
+
+
 const optimization = () => {
     const config = {
         splitChunks: {
@@ -66,16 +79,10 @@ module.exports = {
     optimization: optimization(),
     devServer: {
         port: 9000,
-        hot: isDevelopment
+        // hot: isDevelopment
     },
     devtool: isDevelopment ? 'source-map' : '',
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './index.html',
-            minify: {
-                // collapseWhitespace: isProduction
-            },
-        }),
         new ScriptExtHtmlWebpackPlugin({
             defaultAttribute: 'defer'
         }),
@@ -95,7 +102,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: filename('css'),
         })
-    ],
+    ].concat(htmlWebpackPlugins),
     module: {
         rules: [
             {
@@ -112,11 +119,32 @@ module.exports = {
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/,
-                use: ['file-loader']
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            context: '',
+                            outputPath: './assets/img/',
+                            publicPath: './assets/img/',
+                        },
+                    },
+
+                ]
             },
             {
                 test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-                use: ['file-loader']
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: './assets/fonts/',
+                            publicPath: './assets/fonts/',
+                        },
+                    },
+
+                ]
             },
             {
                 test: /\.js$/,

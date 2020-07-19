@@ -17,7 +17,6 @@ h1{
 }
 
 .logo{
-    background: url(../assets/png.png) center/contain no-repeat;
     background: url(../assets/svg.svg) center/contain no-repeat;
     width: 200px;
     height: 200px;
