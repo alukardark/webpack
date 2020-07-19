@@ -73,7 +73,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './index.html',
             minify: {
-                collapseWhitespace: isProduction
+                // collapseWhitespace: isProduction
             },
         }),
         new ScriptExtHtmlWebpackPlugin({
