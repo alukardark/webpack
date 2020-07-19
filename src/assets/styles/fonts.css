@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Spectral';
+    src: url('../fonts/Spectral/Spectral-Regular.eot');
+    src: url('../fonts/Spectral/Spectral-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Spectral/Spectral-Regular.woff2') format('woff2'),
+    url('../fonts/Spectral/Spectral-Regular.woff') format('woff'),
+    url('../fonts/Spectral/Spectral-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

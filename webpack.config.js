@@ -63,11 +63,15 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
-        main: './index.js',
-        analytics: './analytics.js',
+        main: './assets/js/index.js',
+        analytics: './assets/js/analytics.js',
     },
+    // output: {
+    //     filename: filename('js'),
+    //     path: path.resolve(__dirname, 'dist')
+    // },
     output: {
-        filename: filename('js'),
+        filename: 'js/[name].[hash].js',
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
@@ -89,22 +93,23 @@ module.exports = {
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
-                {
-                    from: path.resolve(__dirname, 'src/assets/favicon.ico'),
-                    to: path.resolve(__dirname, 'dist/assets/favicon.ico')
-                },
                 // {
-                //     from: path.resolve(__dirname, 'src/assets/img'),
-                //     to: path.resolve(__dirname, 'dist/assets/img')
+                //     from: path.resolve(__dirname, 'src/assets/favicon.ico'),
+                //     to: path.resolve(__dirname, 'dist/assets/favicon.ico')
                 // },
+                {
+                    from: path.resolve(__dirname, 'src/assets/img'),
+                    to: path.resolve(__dirname, 'dist/assets/img')
+                },
             ],
         }),
         new MiniCssExtractPlugin({
-            filename: filename('css'),
+            filename: "styles/[name].[hash].css",
         })
     ].concat(htmlWebpackPlugins),
     module: {
         rules: [
+
             {
                 test: /\.css$/,
                 use: cssLoaders()
@@ -125,8 +130,9 @@ module.exports = {
                         options: {
                             name: '[name].[ext]',
                             context: '',
-                            outputPath: './assets/img/',
-                            publicPath: './assets/img/',
+                            outputPath: 'assets/img/',
+                            publicPath: '../assets/img/',
+                            esModule: false
                         },
                     },
 
@@ -139,8 +145,8 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: './assets/fonts/',
-                            publicPath: './assets/fonts/',
+                            outputPath: 'fonts',
+                            publicPath: '../fonts/',
                         },
                     },
 
