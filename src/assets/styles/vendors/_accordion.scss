@@ -1,0 +1,14 @@
+.accordion {
+  &-head {
+    width: 100%;
+    position: relative;
+    transition: .2s ease-in-out background, .2s ease-in-out border;
+    &.open {
+
+    }
+  }
+  &-cont {
+    overflow: hidden;
+    transition: .2s ease-in-out background, .2s ease-in-out margin;
+  }
+}

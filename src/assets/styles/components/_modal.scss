@@ -1,0 +1,145 @@
+.modal {
+  text-align: center;
+  font-size: 14px;
+  background: rgba(49, 49, 49, 0.72);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  overflow: auto;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+  }
+  &__overlay {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  &__container {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    max-width: 775px;
+    max-height: 95%;
+    box-sizing: border-box;
+    position: relative;
+    margin: 15px;
+
+  }
+
+  &__close {
+    z-index: 1;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 28px;
+    height: 28px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: .2s ease-in-out all;
+    &:after, &:before {
+      content: '';
+      background: #000;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: .3s ease-in-out all;
+    }
+    &:after {
+      height: 1px;
+      width: 9px;
+      transform: translate(-50%, -50%);
+    }
+    &:before {
+      height: 9px;
+      width: 1px;
+      transform: translate(-50%, -50%);
+    }
+    &:hover {
+
+    }
+  }
+
+}
+
+@media (max-width: $xl) {
+  .modal {
+
+  }
+}
+
+@media (max-width: $lg) {
+  .modal {
+
+  }
+
+  @media (max-width: $md) {
+    .modal {
+
+    }
+  }
+
+  @media (max-width: $sm) {
+    .modal {
+      &__container {
+
+      }
+    }
+  }
+}
+
+/**************************\
+  Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes mmslideIn {
+  from {
+    transform: translateY(15%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mmslideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10%);
+  }
+}
+
+
+
+
+
+

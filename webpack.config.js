@@ -64,7 +64,6 @@ module.exports = {
     mode: 'development',
     entry: {
         main: './assets/js/index.js',
-        analytics: './assets/js/analytics.js',
     },
     // output: {
     //     filename: filename('js'),

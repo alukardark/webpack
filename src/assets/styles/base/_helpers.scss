@@ -1,0 +1,50 @@
+.overflow-hide {
+  overflow: hidden !important;
+}
+
+.overflow-unset {
+  overflow: unset !important;
+}
+
+.w-0 {
+  width: 0 !important;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+}
+
+.wrapper-content {
+  flex: 1 0 auto;
+}
+
+.sticky {
+  position: fixed;
+  z-index: 101;
+}
+
+.stop {
+  position: relative;
+  z-index: 101;
+}
+
+@-webkit-keyframes tape {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -400%;
+  }
+}
+
+@keyframes tape {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -400%;
+  }
+}

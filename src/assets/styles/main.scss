@@ -1,0 +1,58 @@
+@charset 'UTF-8';
+// 1. Configuration and helpers
+@import
+'abstracts/variables',
+'abstracts/functions',
+'abstracts/mixins',
+'abstracts/animations.scss';
+
+
+// 2. Vendors
+@import "~normalize.scss";
+@import "vendors/bootstrap";
+@import "~bootstrap";
+@import "~@fancyapps/fancybox/dist/jquery.fancybox";
+@import 'vendors/fancy-modal';
+@import "~animate.css";
+@import "~swiper/dist/css/swiper";
+//@import "node_modules/wow.js/css/libs/animate";
+//@import "vendors/wow";
+//@import "node_modules/choices.js/public/assets/styles/choices.min";
+//@import "vendors/choices";
+//@import "node_modules/simplebar/dist/simplebar.min";
+//@import "vendors/simplebar";
+//@import "node_modules/tippy.js/dist/tippy";
+//@import "vendors/tippy";
+//@import "node_modules/tippy.js/dist/themes/light";
+//@import "node_modules/flatpickr/dist/flatpickr.min";
+////@import "node_modules/badger-accordion/dist/badger-accordion";
+
+
+
+// 3. Base stuff
+@import
+'base/base',
+'base/fonts',
+'base/typography',
+'base/helpers';
+
+// 4. Layout-related sections
+@import
+'layout/header',
+'layout/main'
+;
+
+
+// 5. Components
+@import
+  //'components/checkbox-list',
+'components/burger',
+'components/pagination';
+//'components/breadcrumbs',
+//'components/button',
+//'components/modal',
+//'components/waves-effect',
+//'components/add-basket-message',
+//'components/progress',
+//'components/tilter';
+

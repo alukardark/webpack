@@ -1,16 +1,8 @@
 // import '../styles/styles.css'
-import '../styles/main.sass'
+import '../styles/main.scss'
 
 import * as $ from 'jquery';
-import Post from './Post';
-import json from './json';
 
 
 
-
-const post = new Post('Webpack post title');
-
-$('pre').html(post.toString());
-
-console.log('JSON:', json);
 

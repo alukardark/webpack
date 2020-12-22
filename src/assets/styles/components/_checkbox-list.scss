@@ -1,0 +1,93 @@
+.checkbox-list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  li{
+    position: relative;
+    margin-bottom: 10px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+  label{
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0;
+    transition: .2s ease-in-out color;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 1;
+    color: #D9D9D9;
+    &:hover{
+      i{
+      }
+    }
+  }
+  i{
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: .2s  ease-in-out all;
+    border-radius: 50%;
+    margin-right: 18px;
+    background: transparent;
+    position: relative;
+    transform: translateY(-2px);
+    &:before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 30px;
+      height: 30px;
+      transform: translate(-50%, -50%) scale(0);
+      transition: all ease-in-out .3s;
+      border-radius: 50%;
+      background: #fff;
+    }
+  }
+  input[type="checkbox"], input[type="radio"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    &:checked{
+      &+label{
+        i{
+          &:before{
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .checkbox-list{
+
+  }
+}
+
+@media (max-width: $md) {
+  .checkbox-list{
+    label{
+      font-size: 20px;
+      padding: 0 0px 5px;
+    }
+    i{
+      width: 33px;
+      height: 33px;
+      &:before{
+        width: 23px;
+        height: 23px;
+      }
+    }
+  }
+}

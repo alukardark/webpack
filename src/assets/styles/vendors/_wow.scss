@@ -1,0 +1,8 @@
+.wow{
+  visibility: hidden;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+[data-swiper-animation]{
+  visibility: hidden;
+}

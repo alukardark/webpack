@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('../fonts/DINPro/DINPro-Light.eot');
+  src: local('DIN Pro Light'), local('DINPro-Light'),
+  url('../fonts/DINPro/DINPro-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DINPro/DINPro-Light.woff') format('woff'),
+  url('../fonts/DINPro/DINPro-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('../fonts/DINPro/DINPro.eot');
+  src: local('DIN Pro'), local('DINPro'),
+  url('../fonts/DINPro/DINPro.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DINPro/DINPro.woff') format('woff'),
+  url('../fonts/DINPro/DINPro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('../fonts/DINPro/DINPro-Medium.eot');
+  src: local('DIN Pro Medium'), local('DINPro-Medium'),
+  url('../fonts/DINPro/DINPro-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DINPro/DINPro-Medium.woff') format('woff'),
+  url('../fonts/DINPro/DINPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('../fonts/DINPro/DINPro-Bold.eot');
+  src: local('DIN Pro Bold'), local('DINPro-Bold'),
+  url('../fonts/DINPro/DINPro-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DINPro/DINPro-Bold.woff') format('woff'),
+  url('../fonts/DINPro/DINPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('../fonts/DINPro/DINPro-Black.eot');
+  src: local('DIN Pro Black'), local('DINPro-Black'),
+  url('../fonts/DINPro/DINPro-Black.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DINPro/DINPro-Black.woff') format('woff'),
+  url('../fonts/DINPro/DINPro-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Pro Cond';
+  src: url('../fonts/DINPro/DINPro-CondensedMedium.eot');
+  src: local('DIN Pro Condensed Medium'), local('DINPro-CondensedMedium'),
+  url('../fonts/DINPro/DINPro-CondensedMedium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DINPro/DINPro-CondensedMedium.woff') format('woff'),
+  url('../fonts/DINPro/DINPro-CondensedMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Pro Cond';
+  src: url('../fonts/DINPro/DINPro-CondensedBlack.eot');
+  src: local('DIN Pro Condensed Black'), local('DINPro-CondensedBlack'),
+  url('../fonts/DINPro/DINPro-CondensedBlack.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DINPro/DINPro-CondensedBlack.woff') format('woff'),
+  url('../fonts/DINPro/DINPro-CondensedBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Pro Cond';
+  src: url('../fonts/DINPro/DINPro-CondensedBold.eot');
+  src: local('DIN Pro Condensed Bold'), local('DINPro-CondensedBold'),
+  url('../fonts/DINPro/DINPro-CondensedBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DINPro/DINPro-CondensedBold.woff') format('woff'),
+  url('../fonts/DINPro/DINPro-CondensedBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Pro Cond';
+  src: url('../fonts/DINPro/DINPro-CondensedRegular.eot');
+  src: local('DIN Pro Condensed Regular'), local('DINPro-CondensedRegular'),
+  url('../fonts/DINPro/DINPro-CondensedRegular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DINPro/DINPro-CondensedRegular.woff') format('woff'),
+  url('../fonts/DINPro/DINPro-CondensedRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Pro Cond';
+  src: url('../fonts/DINPro/DINPro-CondensedLight.eot');
+  src: local('DIN Pro Condensed Light'), local('DINPro-CondensedLight'),
+  url('../fonts/DINPro/DINPro-CondensedLight.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DINPro/DINPro-CondensedLight.woff') format('woff'),
+  url('../fonts/DINPro/DINPro-CondensedLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+

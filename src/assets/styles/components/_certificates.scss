@@ -1,0 +1,110 @@
+.certificates-slider {
+  margin-bottom: 110px;
+  &__slider {
+    position: relative;
+    margin-top: 25px;
+  }
+  &__img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 255px;
+    display: block;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .2s ease-in-out all;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      opacity: 0;
+      transition: .2s ease-in-out all;
+      background: #fff url(../img/search-red.svg) center/20px 20px no-repeat;
+    }
+  }
+  &__title {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #000000;
+  }
+  &__slider-slide {
+    &:hover {
+      .certificates-slider__img {
+        &:before {
+          opacity: 1;
+        }
+        &:after {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+  }
+
+  &__slider-prev, &__slider-next {
+    width: 16px;
+    height: 28px;
+    top: -45px;
+    right: 0;
+    left: auto;
+    outline: none;
+    transition: .2s ease-in-out opacity;
+    background: url(../img/arrow-slider.svg) center/contain no-repeat;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  &__slider-prev {
+    right: 55px;
+    transform: rotate(-180deg) translateY(-1px);
+  }
+}
+
+@media (max-width: $lg) {
+  .certificates-slider {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: $md) {
+  .certificates-slider {
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: $sm) {
+  .certificates-slider {
+    margin-left: 25px;
+    margin-right: 25px;
+    &__slider-prev{
+      right: auto;
+      left: -25px;
+    }
+    &__slider-next{
+      right: -25px;
+    }
+    &__slider-prev, &__slider-next {
+      top: 50%;
+      margin-top: -40px;
+    }
+  }
+}
