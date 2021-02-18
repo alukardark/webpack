@@ -1,7 +1,12 @@
-// import '../styles/styles.css'
 import '../styles/main.scss'
 
-import * as $ from 'jquery';
+window.$ = window.jQuery = require('jquery');
+// import * as $ from 'jquery';
+
+
+// require("@fancyapps/fancybox");
+// require('./filter.js');
+// require('./forms.js');
 
 
 
